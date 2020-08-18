@@ -13,14 +13,14 @@ function showSearchResult(data){
     searchResult.classList.add("search-result", "col-md-8", "mx-auto", "py-4")
     for (let i = 0; i < 10; i++) {
         const element = data.data[i];
-        const title = element.album.title;
+        const title = element.title;
         const artist = element.artist.name;
         // let artist = artist.name;
         // let title = album.title;
         const child = ` <div class="single-result row align-items-center my-3 p-3">
                             <div class="col-md-9">
-                                <h3 class="lyrics-name"> <span data-title>${title}</span>.</h3>
-                                <p class="author lead">Album by <span data-artist>${artist}</span></p>
+                                <h3 class="lyrics-name text-center"> <span>${title}</span>.</h3>
+                                <p class="author lead ">Album by <span>${artist}</span></p>
                             </div>
                             <div class="col-md-3 text-md-right text-center">
                                 <button onclick="getLyrics('${artist}', '${title}')" class="btn btn-success">Get Lyrics</button>
